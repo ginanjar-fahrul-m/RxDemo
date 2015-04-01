@@ -9,7 +9,7 @@ public class Playground {
     private static Playground instance = null;
     private Playground(){}
 
-    private final static String TAG =  Playground.class.getName();
+    private final static String TAG =  Playground.class.getCanonicalName();
 
     public static synchronized Playground getInstance(){
         if(instance == null){
