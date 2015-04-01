@@ -18,7 +18,7 @@ public class DemoView extends FrameLayout{
     private EditText numberA;
     private EditText numberB;
     private EditText numberC;
-    private Observable<Integer> sumObservable;
+    private Observable<String> sumObservable;
 
     public DemoView(Context context) {
         super(context, null);

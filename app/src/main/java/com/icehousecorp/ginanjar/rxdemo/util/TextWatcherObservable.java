@@ -2,6 +2,7 @@ package com.icehousecorp.ginanjar.rxdemo.util;
 
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.widget.EditText;
 
 import rx.Observable;
@@ -13,19 +14,20 @@ import rx.subjects.Subject;
  * Created by ginanjar on 4/1/15.
  */
 public class TextWatcherObservable {
-    static public Observable<Integer> create(EditText editText){
+    private static final String TAG = TextWatcherObservable.class.getSimpleName();
+    static public Observable<String> create(EditText editText){
         return Observable.create(new OnSubscribe(editText));
     }
 
-    static class OnSubscribe implements TextWatcher, Observable.OnSubscribe<Integer> {
-        final private Subject<Integer, Integer> subject = BehaviorSubject.create();
+    static class OnSubscribe implements TextWatcher, Observable.OnSubscribe<String> {
+        final private Subject<String, String> subject = BehaviorSubject.create();
 
         private OnSubscribe(EditText editText){
             editText.addTextChangedListener(this);
         }
 
         @Override
-        public void call(Subscriber<? super Integer> subscriber) {
+        public void call(Subscriber<? super String> subscriber) {
             subject.subscribe(subscriber);
         }
 
@@ -36,7 +38,8 @@ public class TextWatcherObservable {
 
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
-            subject.onNext(Integer.parseInt(s.toString()));
+            subject.onNext(s.toString());
+            Log.v(TAG, "TextChanged");
         }
 
         @Override
