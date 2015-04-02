@@ -47,5 +47,6 @@ public class PlaceholderFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        demoView = (DemoView) view.findViewById(R.id.demo_view);
     }
 }

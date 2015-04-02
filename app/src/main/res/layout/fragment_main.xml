@@ -87,4 +87,16 @@
 
     </com.icehousecorp.ginanjar.rxdemo.view.DemoView>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Rule: C = A + B"
+        android:id="@+id/textView5"
+        android:layout_alignTop="@+id/demo_view"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="185dp"
+        android:gravity="center" />
+
 </RelativeLayout>
