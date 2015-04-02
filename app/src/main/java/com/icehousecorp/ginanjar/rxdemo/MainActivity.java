@@ -11,8 +11,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
 
+import com.icehousecorp.ginanjar.rxdemo.app.RxActionBarActivity;
 
-public class MainActivity extends ActionBarActivity {
+
+public class MainActivity extends RxActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

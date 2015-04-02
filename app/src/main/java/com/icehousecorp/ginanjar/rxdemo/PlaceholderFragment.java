@@ -4,25 +4,14 @@ package com.icehousecorp.ginanjar.rxdemo;
  * Created by ginanjar on 4/1/15.
  */
 
-import android.database.Observable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
-import android.util.Log;
-import android.widget.TextView;
 
 import com.icehousecorp.ginanjar.rxdemo.view.DemoView;
-
-import rx.Subscriber;
-import rx.android.Events;
-import rx.android.widget.OnTextChangeEvent;
-import rx.android.widget.WidgetObservable;
 
 /**
  * A placeholder fragment containing a simple view.
